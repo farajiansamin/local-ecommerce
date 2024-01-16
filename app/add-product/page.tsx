@@ -1,6 +1,6 @@
 import React from "react";
 import PostProductButton from "../components/PostProductButton";
-import {prisma} from "../lib/db/prisma";
+//import {prisma} from `../lib/db/prisma`;
 
 import { redirect } from "next/navigation";
 
@@ -14,15 +14,15 @@ async function addProduct(formData:FormData) {
   const price =Number(formData.get('price')|| 0);
 
 
-  if (!name || ! description || !imgUrl || !price){
+  if (!name || !description || !imgUrl || !price){
     throw Error("Missing required fields");
   }
 
 
-  await prisma?.product.create ({
+  //await prisma?.product.create ({
    
-    data :{ name, description, imgUrl , price}
-  })
+    //data :{ name, description, imgUrl , price}
+ // })
 
   redirect("/")
 }
@@ -34,12 +34,12 @@ const addProductPage = () => {
       <form  action={addProduct}>
         <input required name="name" placeholder="Name" className="input input-bordered w-full mb-3"/>
         <input required name="imgUrl" placeholder="Image URL" type="url" className="input input-bordered w-full mb-3"/> 
-        <input required name="price" placeholder="Price"  className="input input-bordered w-full mb-3"/> 
+        <input required name="price" placeholder="Price" type="number" className="input input-bordered w-full mb-3"/> 
         <textarea required name="description" placeholder="Description" className="textarea textarea-bordered w-full mb-3"/> 
         
        
         
-        <PostProductButton />
+        <PostProductButton className="btn-block"> Add Product</PostProductButton>
         
       </form>
     </div>
