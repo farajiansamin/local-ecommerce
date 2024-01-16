@@ -2,7 +2,7 @@ import Link from "next/link";
 import products from "../products.json";
 import ProductCard from "./components/ProductCard";
 import Image from "next/image";
-console.log(products);
+//console.log(products);
 
 export default async function Home() {
   //const products= await prisma?.product.findMany({
@@ -21,9 +21,9 @@ export default async function Home() {
           <Image
             src={products[0].imageUrl}
             alt={products[0].name}
-            width={400}
-            height={800}
-            className="w-full max-w-sm rounded-lg shadow-2xl"
+            width={10000}
+            height={10000}
+            className="w-full max-w-md rounded-lg shadow-2xl"
             priority
           />
           <div>

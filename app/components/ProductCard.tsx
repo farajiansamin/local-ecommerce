@@ -3,10 +3,11 @@ import Link from 'next/link';
 import PriceTag from './PriceTag';
 import Image from 'next/image';
 
-//import {product} form "@prisma/client"
+//import {product} from "@prisma/client"
 
 interface ProductCardProps{
-    product:product;
+    product:{id: string , name :string, price: number, imageUrl:string, description :string};
+    //product :product;
 
 
 }
@@ -35,7 +36,7 @@ const ProductCard = ({product}:ProductCardProps) => {
 
     </figure>
     <div className='card-body'>
-        <h2 className='card-title'>{product.name}{isNew && <div className ="badge badge-secondary">New</div>}</h2>
+        <h2 className='card-title'>{product.name}{isNew && <div className ="badge badge-seco">New</div>}</h2>
         <p>{product.description}</p>
         <PriceTag price={product.price} />
 

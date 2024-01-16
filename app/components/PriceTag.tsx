@@ -1,5 +1,6 @@
 import React from 'react'
 import { formatPrice } from '../lib/format'
+
 interface PriceTagProps{
     price :number,
     className ?:string
