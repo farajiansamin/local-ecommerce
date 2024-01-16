@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "name": "Product 1GGATFGAERGVAFRERGAERGVARG",
+        "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": 34.1,
+        "description": "Description for product 1",
+        "createdAt": "2024-01-05",
+        "updatedDate": "2024-01-15",
+        "sellerId": 847,
+        "productCategory": "Category 4"
+    },
+    {
+        "id": 2,
+        "name": "Product 2",
+        "imageUrl": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": 36.33,
+        "description": "Description for product 2",
+        "createdAt": "2024-01-13",
+        "updatedDate": "2024-01-15",
+        "sellerId": 788,
+        "productCategory": "Category 1"
+    },
+    {
+        "id": 3,
+        "name": "Product 3",
+        "imageUrl": "https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": 44.53,
+        "description": "Description for product 3",
+        "createdAt": "2024-01-14",
+        "updatedDate": "2024-01-15",
+        "sellerId": 631,
+        "productCategory": "Category 1"
+    },
+    {
+        "id": 4,
+        "name": "Product 4",
+        "imageUrl": "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": 71.5,
+        "description": "Description for product 4",
+        "createdAt": "2024-01-06",
+        "updatedDate": "2024-01-15",
+        "sellerId": 662,
+        "productCategory": "Category 4"
+    },
+    {
+        "id": 5,
+        "name": "Product 5",
+        "imageUrl": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": 43.26,
+        "description": "Description for product 5",
+        "createdAt": "2023-12-22",
+        "updatedDate": "2024-01-15",
+        "sellerId": 903,
+        "productCategory": "Category 3"
+    },
+    {
+        "id": 6,
+        "name": "Product 6",
+        "imageUrl": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": 69.63,
+        "description": "Description for product 6",
+        "createdAt": "2023-12-17",
+        "updatedDate": "2024-01-15",
+        "sellerId": 772,
+        "productCategory": "Category 5"
+    },
+    {
+        "id": 7,
+        "name": "Product 7",
+        "imageUrl": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "price": 82.05,
+        "description": "Description for product 7",
+        "createdAt": "2023-12-30",
+        "updatedDate": "2024-01-15",
+        "sellerId": 326,
+        "productCategory": "Category 5"
+    }
+   
+]
