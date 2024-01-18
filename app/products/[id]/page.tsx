@@ -9,6 +9,7 @@ import { notFound } from 'next/navigation';
 import { cache } from 'react';
 import { Metadata } from 'next';
 import  prisma from '../../lib/db/prisma';
+import { incrementProductQuantity } from './action';
 console.log(products);
 
 
@@ -19,10 +20,7 @@ interface ProductPageProps {
     }
 }
 
-interface product{
-    id: string , name :string, price: number, imageUrl:string, description :string
 
-}
 
  const getProduct = cache ( async (id:string) =>{
     const product = await prisma.product.findUnique({where :{id}})
@@ -62,7 +60,7 @@ export default async function ProductPage({params:{id}}:ProductPageProps){
                 <PriceTag price={product.price} className='mg-4'/>
 
                 <p className='py-6'> {product.description}</p>
-                <AddtoCartButton productId={product.id}/>
+                <AddtoCartButton productId={product.id} incrementProductQuantity={incrementProductQuantity}/>
 
 
             </div>
