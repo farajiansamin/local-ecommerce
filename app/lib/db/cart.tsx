@@ -1,5 +1,13 @@
 import prisma from "../db/prisma";
 import { cookies } from "next/headers";
+import { cart } from "@prisma/client";
+
+export type CartsWithProducts= Prisma.cartGet
+export type ShoppingCart= cart &{
+    size: number,
+    subtotal:number,
+}
+
 
 export async function createCart() {
   const newCart = await prisma.cart.create({
@@ -23,7 +31,7 @@ export async function gerCard() {
     if (!cart){return null} 
     return {
         ...cart,
-        size: cart.items.reduce((acc,item) =>acc + item.quanitity,0)
+        size: cart.items.reduce((acc,item) =>acc + item.quantity,0),
         subtotal: cart.items.reduce((acc,item)=> acc + item.quantity * item.product.price,0)
        
     }
