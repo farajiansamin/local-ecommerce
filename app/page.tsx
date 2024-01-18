@@ -1,16 +1,14 @@
 import Link from "next/link";
-import products from "../products.json";
+//import products from "../products.json";
 import ProductCard from "./components/ProductCard";
 import Image from "next/image";
+import prisma from "../app/lib/db/prisma"
 //console.log(products);
 
 export default async function Home() {
-  //const products= await prisma?.product.findMany({
+  const products= await prisma.product.findMany({
   orderBy: {
-    id: "desc";
-  }
-
-  // })
+    id: "desc",} });
 
   // here is the product banner
 
@@ -19,7 +17,7 @@ export default async function Home() {
       <div className="hero rounded-xl bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
           <Image
-            src={products[0].imageUrl}
+            src={products[0].imgUrl}
             alt={products[0].name}
             width={10000}
             height={10000}

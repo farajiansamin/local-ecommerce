@@ -3,11 +3,11 @@ import Link from 'next/link';
 import PriceTag from './PriceTag';
 import Image from 'next/image';
 
-//import {product} from "@prisma/client"
+import {product} from "@prisma/client"
 
 interface ProductCardProps{
-    product:{id: string , name :string, price: number, imageUrl:string, description :string};
-    //product :product;
+    
+    product :product;
 
 
 }
@@ -22,7 +22,7 @@ const ProductCard = ({product}:ProductCardProps) => {
     <Link   className="card w-full bg-base-100 hover:shadow-xl transition-shadow" href={"/products/" + product.id}> 
     <figure>
         <Image
-            src={product.imageUrl}
+            src={product.imgUrl}
             alt={product.name}
             width={800}
             height={400}

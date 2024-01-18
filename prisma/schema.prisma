@@ -8,16 +8,15 @@ datasource db {
 }
 
 model product {
-  id               String     @id @default(auto()) @map("_id") @db.ObjectId
-  description      String
-  imgUrl           String
-  name             String
-  price            Float
-  product_category String
-  sellerid         String
-  createdAt        DateTime   @default(now())
-  updatedAt        DateTime   @updatedAt
-  cartItem         cartItem[]
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  description String
+  imgUrl      String
+  name        String
+  price       Int
+
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  cartItem  cartItem[]
 
   @@map("product")
 }
@@ -27,8 +26,7 @@ model cart {
 
   createdAt DateTime   @default(now())
   updatedAt DateTime   @updatedAt
-  itemes  cartItem[]
-
+  items    cartItem[]
 
   @@map("cart")
 }
@@ -36,10 +34,10 @@ model cart {
 model cartItem {
   id        String  @id @default(auto()) @map("_id") @db.ObjectId
   productId String  @db.ObjectId
-  product   product @relation(fields: [productId], references: [id], onDelete :Cascade)
+  product   product @relation(fields: [productId], references: [id], onDelete: Cascade)
   quanitity Int
   cartId    String  @db.ObjectId
   cart      cart    @relation(fields: [cartId], references: [id])
-  
+
   @@map("cartItem")
 }

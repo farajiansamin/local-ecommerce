@@ -8,6 +8,7 @@ import PriceTag from '@/app/components/PriceTag';
 import { notFound } from 'next/navigation';
 import { cache } from 'react';
 import { Metadata } from 'next';
+import  prisma from '../../lib/db/prisma';
 console.log(products);
 
 
@@ -20,12 +21,11 @@ interface ProductPageProps {
 
 interface product{
     id: string , name :string, price: number, imageUrl:string, description :string
-    
-
 
 }
+
  const getProduct = cache ( async (id:string) =>{
-    const product = await products.find(product => product.id == id);
+    const product = await prisma.product.findUnique({where :{id}})
     if (!product){ notFound();}
     return product
  })
@@ -33,20 +33,20 @@ interface product{
 
  export async function generateMetadata({params:{id}}:ProductPageProps): Promise <Metadata>{
     const product=await getProduct(id)
-    return { title : product.name , description:product.description, openGraph :{images :[{url:product.imageUrl}]}}
+    return { title : product.name , description:product.description, openGraph :{images :[{url:product.imgUrl}]}}
 
  }
 
 export default async function ProductPage({params:{id}}:ProductPageProps){
 
-    //const product =await prisma.product.findUnique({where :{id}})
+   
     const product=await getProduct(id)
     
 
     return (
         <div className="flex flex-col lg:flex-row gap-5 lg:items-center">
             <Image 
-            src={product.imageUrl}
+            src={product.imgUrl}
             alt={product.name}
             width={500}
             height={500}
@@ -62,9 +62,12 @@ export default async function ProductPage({params:{id}}:ProductPageProps){
                 <PriceTag price={product.price} className='mg-4'/>
 
                 <p className='py-6'> {product.description}</p>
+                <AddtoCartButton productId={product.id}/>
 
 
             </div>
+
+            
 
 
 
