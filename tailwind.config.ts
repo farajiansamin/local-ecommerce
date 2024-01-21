@@ -36,3 +36,29 @@ const config: Config = {
 
 
 export default config
+//daisyui: {
+ // themes: [
+ //   {
+  ///    mytheme: {
+      
+//"primary": "#0075ff",
+      
+//"secondary": "#008200",
+      
+//"accent": "#e4a100",
+      
+//"neutral": "#161616",
+      
+//"base-100": "#fff8f0",
+      
+//"info": "#116ee6",
+      
+//"success": "#00ca5c",
+      
+//"warning": "#efd200",
+      
+//"error": "#ff0045",
+//     },
+////    },
+//  ],
+//},

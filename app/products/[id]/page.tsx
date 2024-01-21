@@ -10,7 +10,7 @@ import { cache } from 'react';
 import { Metadata } from 'next';
 import  prisma from '../../lib/db/prisma';
 import { incrementProductQuantity } from './action';
-console.log(products);
+//console.log(products);
 
 
 

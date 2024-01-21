@@ -10,6 +10,7 @@ export type ShoppingCart = CartsWithProducts & {
   size: number;
   subtotal: number;
 };
+export type CartItemWithProduct= Prisma.cartItemGetPayload <{ include:{product:true}}>
 
 export async function createCart(): Promise<ShoppingCart> {
   const newCart = await prisma.cart.create({
@@ -18,7 +19,7 @@ export async function createCart(): Promise<ShoppingCart> {
 
   // Note: needs encryption+secure settings in real production
 
-  cookies().set("localCardId", newCart.id);
+  cookies().set("localCartId", newCart.id);
 
   return {
     ...newCart,
@@ -29,7 +30,7 @@ export async function createCart(): Promise<ShoppingCart> {
 }
 
 export async function getCard(): Promise<ShoppingCart | null> {
-  const localCartId = cookies().get("loca;CartId")?.value;
+  const localCartId = cookies().get("localCartId")?.value;
   const cart = localCartId
     ? await prisma.cart.findUnique({
         where: { id: localCartId },
