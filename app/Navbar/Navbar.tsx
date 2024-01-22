@@ -5,6 +5,9 @@ import logo from "../assest/ecommerce-logo.png"
 import { redirect } from 'next/navigation'
 import ShoppingCartIcon from './ShoppingCartIcon'
 import { getCard } from '../lib/db/cart'
+import UserMenueButton from './UserMenueButton'
+import { getServerSession } from 'next-auth'
+import { authOptions } from '../api/auth/[...nextauth]/route'
 
 
 async function handleSearchProducts(formData:FormData){
@@ -14,6 +17,7 @@ async function handleSearchProducts(formData:FormData){
 }
 
 export default async function Navbar() {
+    const session= await getServerSession(authOptions)
     const cart = await getCard();
     console.log(cart)
   return (
@@ -32,6 +36,7 @@ export default async function Navbar() {
                     </div>
                 </form>
                 <ShoppingCartIcon cart={cart} />
+                <UserMenueButton  session={session}/>
 
 
             </div>

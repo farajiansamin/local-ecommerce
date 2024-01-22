@@ -2,23 +2,15 @@
   "node": {
     "e8c81f1a7787f6707a5167f093ea689e87f9d431": {
       "workers": {
-        "app/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fsaminfarajian%2Flocal-ecommerce%2Fapp%2Fcart%2Faction.ts%22%2C%5B%22SetQuantity%22%5D%5D%2C%5B%22%2FUsers%2Fsaminfarajian%2Flocal-ecommerce%2Fapp%2FNavbar%2FNavbar.tsx%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!",
         "app/not-found": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fsaminfarajian%2Flocal-ecommerce%2Fapp%2FNavbar%2FNavbar.tsx%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!",
         "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fsaminfarajian%2Flocal-ecommerce%2Fapp%2FNavbar%2FNavbar.tsx%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!",
-        "app/products/[id]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fsaminfarajian%2Flocal-ecommerce%2Fapp%2Fproducts%2F%5Bid%5D%2Faction.tsx%22%2C%5B%22incrementProductQuantity%22%5D%5D%2C%5B%22%2FUsers%2Fsaminfarajian%2Flocal-ecommerce%2Fapp%2FNavbar%2FNavbar.tsx%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!"
-      },
-      "layer": {
-        "app/cart/page": "rsc",
-        "app/not-found": "rsc",
-        "app/page": "rsc",
-        "app/products/[id]/page": "rsc"
-      }
-    },
-    "447ea560d0c2dac560d80b4825b4f82b95b2ca4d": {
-      "workers": {
+        "app/products/[id]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fsaminfarajian%2Flocal-ecommerce%2Fapp%2Fproducts%2F%5Bid%5D%2Faction.tsx%22%2C%5B%22incrementProductQuantity%22%5D%5D%2C%5B%22%2FUsers%2Fsaminfarajian%2Flocal-ecommerce%2Fapp%2FNavbar%2FNavbar.tsx%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!",
         "app/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fsaminfarajian%2Flocal-ecommerce%2Fapp%2Fcart%2Faction.ts%22%2C%5B%22SetQuantity%22%5D%5D%2C%5B%22%2FUsers%2Fsaminfarajian%2Flocal-ecommerce%2Fapp%2FNavbar%2FNavbar.tsx%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!"
       },
       "layer": {
+        "app/not-found": "rsc",
+        "app/page": "rsc",
+        "app/products/[id]/page": "rsc",
         "app/cart/page": "rsc"
       }
     },
@@ -29,8 +21,16 @@
       "layer": {
         "app/products/[id]/page": "rsc"
       }
+    },
+    "447ea560d0c2dac560d80b4825b4f82b95b2ca4d": {
+      "workers": {
+        "app/cart/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fsaminfarajian%2Flocal-ecommerce%2Fapp%2Fcart%2Faction.ts%22%2C%5B%22SetQuantity%22%5D%5D%2C%5B%22%2FUsers%2Fsaminfarajian%2Flocal-ecommerce%2Fapp%2FNavbar%2FNavbar.tsx%22%2C%5B%22%24%24ACTION_0%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/cart/page": "rsc"
+      }
     }
   },
   "edge": {},
-  "encryptionKey": "znvgDMxgbBT0RzrYWK0dU/+wqWGFrU/2FRoVzGcvHq8="
+  "encryptionKey": "cdS56XeT3ppXn0BRGdh5Ua4oYdU9GEXp8ttqtlMNbVI="
 }

@@ -30,7 +30,7 @@ export default function CartEntry({
       <div className="flex flex-wrap items-center gap-3">
         <Image
           className="rounded-lg"
-          src={product.imgUrl}
+          src={product.imageUrl}
           alt={product.name}
           width={200}
           height={200}

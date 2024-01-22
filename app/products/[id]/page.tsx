@@ -2,7 +2,7 @@ import React from 'react'
 import AddtoCartButton from './AddtoCartButton';
 
 //import {prisma} from "../lib/db/prisma"
-import products from "@/products.json";
+
 import Image from 'next/image';
 import PriceTag from '@/app/components/PriceTag';
 import { notFound } from 'next/navigation';
@@ -10,7 +10,7 @@ import { cache } from 'react';
 import { Metadata } from 'next';
 import  prisma from '../../lib/db/prisma';
 import { incrementProductQuantity } from './action';
-//console.log(products);
+//console.log(product);
 
 
 
@@ -31,7 +31,7 @@ interface ProductPageProps {
 
  export async function generateMetadata({params:{id}}:ProductPageProps): Promise <Metadata>{
     const product=await getProduct(id)
-    return { title : product.name , description:product.description, openGraph :{images :[{url:product.imgUrl}]}}
+    return { title : product.name , description:product.description, openGraph :{images :[{url:product.imageUrl}]}}
 
  }
 
@@ -44,7 +44,7 @@ export default async function ProductPage({params:{id}}:ProductPageProps){
     return (
         <div className="flex flex-col lg:flex-row gap-5 lg:items-center">
             <Image 
-            src={product.imgUrl}
+            src={product.imageUrl}
             alt={product.name}
             width={500}
             height={500}
